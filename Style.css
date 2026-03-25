@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap');
+
+:root {
+--green: #556b2f;
+--brown: #8b5e3c;
+--beige: #f4e7c5;
+--gold: #c49a3a;
+--dark: #3e2f1c;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Inter', sans-serif;
+background-color: var(--beige);
+color: var(--dark);
+}
+
+/* Header */
+header {
+background: rgba(62, 47, 28, 0.95);
+color: white;
+padding: 20px 40px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: sticky;
+top: 0;
+}
+
+header h1 {
+font-family: 'Playfair Display', serif;
+letter-spacing: 2px;
+}
+
+/* Nav */
+nav ul {
+list-style: none;
+display: flex;
+gap: 25px;
+}
+
+nav ul li a {
+color: white;
+text-decoration: none;
+position: relative;
+}
+
+nav ul li a::after {
+content: "";
+position: absolute;
+width: 0;
+height: 2px;
+background: var(--gold);
+left: 0;
+bottom: -5px;
+transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+width: 100%;
+}
+
+/* Hero */
+.hero {
+height: 90vh;
+background: linear-gradient(rgba(62,47,28,0.45), rgba(62,47,28,0.45)),
+url('https://images.unsplash.com/photo-1501785888041-af3ef285b470') center/cover no-repeat;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: white;
+padding: 20px;
+}
+
+.hero h2 {
+font-size: 3rem;
+font-family: 'Playfair Display', serif;
+color: white;
+}
+
+.hero p {
+margin-top: 10px;
+font-size: 1.2rem;
+max-width: 600px;
+color: #fdfaf3;
+}
+
+/* Sections */
+section {
+padding: 60px 20px;
+text-align: center;
+}
+
+section h2 {
+font-family: 'Playfair Display', serif;
+font-size: 2rem;
+margin-bottom: 30px;
+color: var(--green);
+}
+
+/* Cards */
+.card-container {
+display: flex;
+justify-content: center;
+gap: 25px;
+flex-wrap: wrap;
+}
+
+.card {
+background: #fffaf0;
+border-radius: 12px;
+overflow: hidden;
+width: 260px;
+box-shadow: 0 10px 25px rgba(62,47,28,0.15);
+transition: 0.3s;
+}
+
+.card img {
+width: 100%;
+height: 170px;
+object-fit: cover;
+filter: brightness(0.9);
+}
+
+.card h3 {
+margin: 15px 0 10px;
+font-family: 'Playfair Display', serif;
+color: var(--brown);
+}
+
+.card p {
+padding: 0 15px 20px;
+color: var(--dark);
+}
+
+.card:hover {
+transform: translateY(-10px);
+}
+
+/* Form */
+form {
+max-width: 500px;
+margin: auto;
+display: flex;
+flex-direction: column;
+}
+
+input, textarea {
+padding: 12px;
+margin: 10px 0;
+border-radius: 5px;
+border: 1px solid #cbb89d;
+background: #fffaf0;
+color: var(--dark);
+}
+
+button {
+background: var(--green);
+color: white;
+border: none;
+padding: 12px;
+cursor: pointer;
+}
+
+button:hover {
+background: var(--brown);
+}
+
+/* Footer */
+footer {
+background: var(--dark);
+color: white;
+text-align: center;
+padding: 20px;
+margin-top: 40px;
+}
